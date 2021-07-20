@@ -1,0 +1,460 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*color variable diclarations*/
+/*each color declarations*/
+.red-text {
+  color: red;
+}
+
+.red-bg {
+  background: red;
+}
+
+.green-text {
+  color: green;
+}
+
+.green-bg {
+  background: green;
+}
+
+.blue-text {
+  color: blue;
+}
+
+.blue-bg {
+  background: blue;
+}
+
+.gold-text {
+  color: gold;
+}
+
+.gold-bg {
+  background: gold;
+}
+
+.dodgerblue-text {
+  color: dodgerblue;
+}
+
+.dodgerblue-bg {
+  background: dodgerblue;
+}
+
+.purple-text {
+  color: purple;
+}
+
+.purple-bg {
+  background: purple;
+}
+
+.teal-text {
+  color: teal;
+}
+
+.teal-bg {
+  background: teal;
+}
+
+.text-red {
+  color: red;
+}
+
+.bg-red {
+  background: red;
+}
+
+.text-green {
+  color: green;
+}
+
+.bg-green {
+  background: green;
+}
+
+.text-blue {
+  color: blue;
+}
+
+.bg-blue {
+  background: blue;
+}
+
+.text-gold {
+  color: gold;
+}
+
+.bg-gold {
+  background: gold;
+}
+
+.text-dodgerblue {
+  color: dodgerblue;
+}
+
+.bg-dodgerblue {
+  background: dodgerblue;
+}
+
+.text-purple {
+  color: purple;
+}
+
+.bg-purple {
+  background: purple;
+}
+
+.text-teal {
+  color: teal;
+}
+
+.bg-teal {
+  background: teal;
+}
+
+/*END*/
+/*container style*/
+.container {
+  /*main section style*/
+}
+
+.container header {
+  width: 100%;
+  padding: 0 20px;
+  background: cornflowerblue;
+}
+
+.container header .logo {
+  width: 40%;
+  float: left;
+}
+
+.container header .logo a {
+  display: block;
+  margin-top: 10px;
+}
+
+.container header .logo a .sass {
+  width: 200px;
+  height: auto;
+  padding: 5px;
+}
+
+.container header .logo a .sassHover {
+  display: none;
+  -webkit-transition: 0.9s;
+  transition: 0.9s;
+}
+
+.container header .logo a:hover .sass {
+  display: none;
+  -webkit-transition: 0.9s;
+  transition: 0.9s;
+}
+
+.container header .logo a:hover .sassHover {
+  display: block;
+  width: 220px;
+  height: auto;
+  padding: 5px;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.container header .nav {
+  width: 40%;
+  float: left;
+}
+
+.container header .nav ul {
+  list-style-type: none;
+}
+
+.container header .nav ul li {
+  display: inline-block;
+}
+
+.container header .nav ul li a {
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+  margin: 12px 10px 0px;
+  padding: 10px 10px 20px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.container header .nav ul li a:hover {
+  background: purple;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  padding-bottom: 15px;
+}
+
+.container header .nav ul .navDropdown {
+  display: inline;
+  position: relative;
+}
+
+.container header .nav ul .navDropdown a {
+  text-decoration: none;
+}
+
+.container header .nav ul .navDropdown .navDropdownContent {
+  width: 180px;
+  position: absolute;
+  top: 38px;
+  left: 3px;
+  background: dodgerblue;
+  -webkit-transition: 0.5;
+  transition: 0.5;
+  display: none;
+}
+
+.container header .nav ul .navDropdown .navDropdownContent li {
+  display: block;
+}
+
+.container header .nav ul .navDropdown .navDropdownContent li a {
+  text-decoration: none;
+  margin: 0;
+  display: block;
+  border-radius: 0;
+}
+
+.container header .nav ul .navDropdown .navDropdownContent li a:hover {
+  background: deepskyblue;
+}
+
+.container header .nav ul .navDropdown:hover .navDropdownContent {
+  display: block;
+}
+
+.container header .socialIcon {
+  width: 20%;
+  float: left;
+  text-align: right;
+  margin-top: 20px;
+  padding-right: 10px;
+}
+
+.container header .socialIcon a {
+  margin-left: 10px;
+}
+
+.container header .socialIcon a img {
+  width: 25px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.container header .socialIcon a img:hover {
+  border: 3px solid blue;
+  border-radius: 50%;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.container header::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.container main #home {
+  width: 100%;
+  background: url("../img/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 77vh;
+}
+
+.container main #home .headerSection {
+  width: 70%;
+  margin: 0 auto;
+  padding: 30px;
+  text-align: center;
+}
+
+.container main #home .headerSection h1 {
+  margin: 10px;
+}
+
+.container main #home .headerSection p {
+  text-align: justify;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #084c91;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.container main #home .headerSection .btn, .container main #home .headerSection .downloadBtn, .container main #home .headerSection .learnMore {
+  border: none;
+  margin: 5px;
+  padding: 5px 10px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.container main #home .headerSection .downloadBtn {
+  background: dodgerblue;
+  color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.container main #home .headerSection .learnMore {
+  background: darkcyan;
+  color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.container main #home .headerSection .btnHover:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.container main .home::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.container main .grid {
+  padding: 10px;
+  background: bisque;
+}
+
+.container main .grid .row1 [class*=col-] {
+  float: left;
+}
+
+.container main .grid .row1 .col-1 {
+  width: 8.33333%;
+}
+
+.container main .grid .row1 .col-2 {
+  width: 16.66667%;
+}
+
+.container main .grid .row1 .col-3 {
+  width: 25%;
+}
+
+.container main .grid .row1 .col-4 {
+  width: 33.33333%;
+}
+
+.container main .grid .row1 .col-5 {
+  width: 41.66667%;
+}
+
+.container main .grid .row1 .col-6 {
+  width: 50%;
+}
+
+.container main .grid .row1 .col-7 {
+  width: 58.33333%;
+}
+
+.container main .grid .row1 .col-8 {
+  width: 66.66667%;
+}
+
+.container main .grid .row1 .col-9 {
+  width: 75%;
+}
+
+.container main .grid .row1 .col-10 {
+  width: 83.33333%;
+}
+
+.container main .grid .row1 .col-11 {
+  width: 91.66667%;
+}
+
+.container main .grid .row1 .col-12 {
+  width: 100%;
+}
+
+.container main .grid .row2 [class*=col-] {
+  float: left;
+}
+
+.container main .grid .row2 .col-1 {
+  width: 8.33333%;
+}
+
+.container main .grid .row2 .col-2 {
+  width: 16.66667%;
+}
+
+.container main .grid .row2 .col-3 {
+  width: 25%;
+}
+
+.container main .grid .row2 .col-4 {
+  width: 33.33333%;
+}
+
+.container main .grid .row2 .col-5 {
+  width: 41.66667%;
+}
+
+.container main .grid .row2 .col-6 {
+  width: 50%;
+}
+
+.container main .grid .row2 .col-7 {
+  width: 58.33333%;
+}
+
+.container main .grid .row2 .col-8 {
+  width: 66.66667%;
+}
+
+.container main .grid .row2 .col-9 {
+  width: 75%;
+}
+
+.container main .grid .row2 .col-10 {
+  width: 83.33333%;
+}
+
+.container main .grid .row2 .col-11 {
+  width: 91.66667%;
+}
+
+.container main .grid .row2 .col-12 {
+  width: 100%;
+}
+
+.container main .grid::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.container main::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.container footer {
+  background: lightblue;
+  padding: 5px 15px;
+}
+/*# sourceMappingURL=demo.css.map */

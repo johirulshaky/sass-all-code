@@ -1,0 +1,247 @@
+@import "reset";
+@import "variables";
+
+/*container style*/
+
+.container {
+    //header style
+    header {
+        width: 100%;
+        padding: 0 20px;
+        background: $cornflowerblue;
+        //logo style
+        .logo {
+            width: 40%;
+            float: left;
+            a {
+                display: block;
+                margin-top: 10px;
+                .sass {
+                    width: 200px;
+                    height: auto;
+                    padding: 5px;
+                }
+                .sassHover {
+                    display: none;
+                    transition: 0.9s;
+                }
+            }
+            a:hover .sass {
+                display: none;
+                transition: 0.9s;
+            }
+            a:hover .sassHover {
+                display: block;
+                width: 220px;
+                height: auto;
+                padding: 5px;
+                transform: scale(1.1);
+            }
+        }
+        //nav style
+        .nav {
+            width: 40%;
+            float: left;
+            ul {
+                list-style-type: none;
+                li {
+                    display: inline-block;
+                    a {
+                        color: $white;
+                        display: inline-block;
+                        text-decoration: none;
+                        margin: 12px 10px 0px;
+                        padding: 10px 10px 20px;
+                        border-top-left-radius: 5px;
+                        border-top-right-radius: 5px;
+                        transition: 0.8s;
+                    }
+                    a:hover {
+                        background: $hoverbg;
+                        transform: scale(1.2);
+                        padding-bottom: 15px;
+                    }
+                }
+                //dropdown menu style
+                .navDropdown {
+                    display: inline;
+                    position: relative;
+                    a {
+                        text-decoration: none;
+                    }
+                    .navDropdownContent {
+                        width: 180px;
+                        position: absolute;
+                        top: 38px;
+                        left: 3px;
+                        background: $dodgerblue;
+                        transition: 0.5;
+                        display: none;
+                        li {
+                            display: block;
+                            a {
+                                text-decoration: none;
+                                margin: 0;
+                                display: block;
+                                border-radius: 0;
+                            }
+                            a:hover {
+                                background: $deepskyblue;
+                            }
+                        }
+                    }
+                }
+                .navDropdown:hover .navDropdownContent {
+                    display: block;
+                }
+            }
+        }
+        //social icon style
+        .socialIcon {
+            width: 20%;
+            float: left;
+            text-align: right;
+            margin-top: 20px;
+            padding-right: 10px;
+            a {
+                margin-left: 10px;
+                img {
+                    width: 25px;
+                    transition: 0.8s;
+                }
+                img:hover {
+                    border: 3px solid $blue;
+                    border-radius: 50%;
+                    transform: rotate(360deg);
+                }
+            }
+        }
+    }
+    header::after {
+        clear: both;
+        content: '';
+        display: table;
+    }
+    /*main section style*/
+    main {
+        // home section style
+        #home {
+            width: 100%;
+            background: url("../img/bg.jpg");
+            background-repeat: no-repeat;
+            background-position: center center;
+            height: 77vh;
+            .headerSection {
+                width: 70%;
+                margin: 0 auto;
+                padding: 30px;
+                text-align: center;
+                h1 {
+                    margin: 10px;
+                }
+                @mixin paraStyle1 {
+                    text-align: justify;
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+                @mixin paraStyle2($fontWeight,
+                $fontColor) {
+                    font-weight: $fontWeight;
+                    color: $fontColor;
+                }
+                @mixin paraStyle3($value) {
+                    @if $value==small {
+                        font-size: 10px;
+                    }
+                    @else if $value==medium {
+                        font-size: 16px;
+                    }
+                    @else if $value==large {
+                        font-size: 20px;
+                    }
+                    @else {
+                        font-size: none;
+                    }
+                }
+                p {
+                    @include paraStyle1;
+                    @include paraStyle2(bold,
+                    rgb(8, 76, 145));
+                    @include paraStyle3(large);
+                    margin-bottom: 20px;
+                }
+                //button style
+                .btn {
+                    border: none;
+                    margin: 5px;
+                    padding: 5px 10px;
+                    font-size: 16px;
+                    text-align: center;
+                    cursor: pointer;
+                }
+                .downloadBtn {
+                    @extend .btn;
+                    background: $dodgerblue;
+                    color: $white;
+                    transition: 0.5s;
+                }
+                .learnMore {
+                    @extend .btn;
+                    background: $darkcyan;
+                    color: $white;
+                    transition: 0.5s;
+                }
+                .btnHover:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+        .home::after {
+            clear: both;
+            content: '';
+            display: table;
+        }
+        //grid style
+        .grid {
+            padding: 10px;
+            background: $bisque;
+            //row1 style-- for loop
+            .row1 {
+                [class*=col-] {
+                    float: left;
+                }
+                @for $i from 1 to 13 {
+                    .col-#{$i} {
+                        width: 100% / 12 * $i;
+                    }
+                }
+            }
+            //row2 style-- while loop
+            .row2 {
+                [class*=col-] {
+                    float: left;
+                }
+                $x: 1;
+                @while $x < 13 {
+                    .col-#{$x} {
+                        width: 100% / 12 * $x;
+                    }
+                    $x: $x+1;
+                }
+            }
+        }
+        .grid::after {
+            clear: both;
+            content: '';
+            display: table;
+        }
+    }
+    main::after {
+        clear: both;
+        content: '';
+        display: table;
+    }
+    footer {
+        background: $lightblue;
+        padding: 5px 15px;
+    }
+}

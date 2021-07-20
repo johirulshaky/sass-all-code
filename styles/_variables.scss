@@ -1,0 +1,65 @@
+/*color variable diclarations*/
+
+$white: white;
+$black: black;
+$red: red;
+$green: green;
+$darkgreen: darkgreen;
+$seagreen: seagreen;
+$blue: blue;
+$yellow: yellow;
+$gold: gold;
+$blueviolet: blueviolet;
+$darkblue: darkblue;
+$tomato: tomato;
+$brown: brown;
+$lightgreen: lightgreen;
+$lightblue: lightblue;
+$bisque: bisque;
+$chocolate: chocolate;
+$cornflowerblue: cornflowerblue;
+$skyblue: skyblue;
+$deepskyblue: deepskyblue;
+$dodgerblue: dodgerblue;
+$cyan: cyan;
+$darkcyan: darkcyan;
+$hotpink: hotpink;
+$lightpink: lightpink;
+$pink: pink;
+$khaki: khaki;
+$lightcyan: lightcyan;
+$headerColor: cadetblue;
+$headColor: lightseagreen;
+$bgteal: teal;
+$hoverbg: purple;
+
+/*each color declarations*/
+
+@each $color in red,
+green,
+blue,
+gold,
+dodgerblue,
+purple,
+teal {
+    .#{$color}-text {
+        color: $color;
+    }
+    .#{$color}-bg {
+        background: $color;
+    }
+}
+
+$colors:( color1:red, color2: green, color3: blue, color4: gold, color5: dodgerblue, color6: purple, color7: teal);
+@each $key,
+$color in $colors {
+    .text-#{$color} {
+        color: $color;
+    }
+    .bg-#{$color} {
+        background: $color;
+    }
+}
+
+
+/*END*/
